@@ -3,8 +3,8 @@
 
 	angular
 		.module('app')
-		.controller('authController', authController)
-		.run(runAuth);
+		.controller('authController', authController);
+		// .run(runAuth);
 	authController.$inject = ['$scope', '$location', '$auth', 'toastr'];
 	function authController($scope, $location, $auth, toastr) {
 

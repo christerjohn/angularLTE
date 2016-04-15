@@ -63,6 +63,33 @@
 		        resolve: {
 		          loginRequired: loginRequired
 		        }
+		    })
+
+		    .state('app.household', {
+		        url: '/household',
+		        templateUrl: 'app/modules/household/household.html',
+		        controller: 'householdController',
+		        resolve: {
+		          loginRequired: loginRequired
+		        }
+		    })
+
+		    .state('app.barangay', {
+		        url: '/household',
+		        templateUrl: 'app/modules/barangay/barangay.html',
+		        controller: 'barangayController',
+		        resolve: {
+		          loginRequired: loginRequired
+		        }
+		    })
+
+		    .state('app.province', {
+		        url: '/province',
+		        templateUrl: 'app/modules/province/province.html',
+		        controller: 'provinceController',
+		        resolve: {
+		          loginRequired: loginRequired
+		        }
 		    });
 
 		$authProvider.loginUrl = '/api/authenticate';
@@ -71,6 +98,8 @@
 	      var $state = $injector.get('$state');
 	      $state.go('app.dashboard');
 	    });
+
+
 
 	    function skipIfLoggedIn($q, $auth) {
 	      var deferred = $q.defer();
