@@ -5,7 +5,7 @@
 		.module('app')
 		.controller('authController', authController)
 		.run(runAuth);
-	authController.$inject = ['$scope', '$location', '$auth', 'toastr'];
+	// authController.$inject = ['$scope', '$location', '$auth', 'toastr'];
 	function authController($scope, $location, $auth, toastr) {
 
 	    $scope.login = function() {
@@ -21,13 +21,13 @@
     	}
     }
 
-	runAuth.$inject = ['$location', '$rootScope', '$state', '$auth', 'toastr'];
-	function runAuth($location, $rootScope, $state, $auth, toastr) {
-	    if (!$auth.isAuthenticated()) { return; }
-	    $auth.logout()
-	      .then(function() {
-	        toastr.info('You have been logged out');
-	        $location.path('/login');
-	      });
-	}
+	// runAuth.$inject = ['$location', '$rootScope', '$state', '$auth', 'toastr'];
+	// function runAuth($location, $rootScope, $state, $auth, toastr) {
+	//     if (!$auth.isAuthenticated()) { return; }
+	//     $auth.logout()
+	//       .then(function() {
+	//         toastr.info('You have been logged out');
+	//         $location.path('/login');
+	//       });
+	// }
 })();
