@@ -90,6 +90,33 @@
 		        resolve: {
 		          loginRequired: loginRequired
 		        }
+		    })
+
+		    .state('app.mapflood', {
+		        url: '/mapflood',
+		        templateUrl: 'app/modules/mapflood/mapflood.html',
+		        controller: 'mapfloodController',
+		        resolve: {
+		          loginRequired: loginRequired
+		        }
+		    })
+
+		    .state('app.mappopulation', {
+		        url: '/mappopulation',
+		        templateUrl: 'app/modules/mappopulation/mappopulation.html',
+		        controller: 'mappopulationController',
+		        resolve: {
+		          loginRequired: loginRequired
+		        }
+		    })
+
+		    .state('app.report', {
+		        url: '/report',
+		        templateUrl: 'app/modules/report/report.html',
+		        controller: 'reportController',
+		        resolve: {
+		          loginRequired: loginRequired
+		        }
 		    });
 
 		$authProvider.loginUrl = '/api/authenticate';
