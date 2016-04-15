@@ -74,14 +74,60 @@
 		        }
 		    })
 
+		    .state('app.create', {
+		        url: '/household/create',
+		        templateUrl: 'app/modules/household/householdCreate.html',
+		        controller: 'householdCreateController',
+		        resolve: {
+		          loginRequired: loginRequired
+		        }
+		    })
+
+		    .state('app.householdDetails', {
+		        url: '/household/householdDetails',
+		        templateUrl: 'app/modules/household/householdDetails/householdDetails.html',
+		        controller: 'householdController',
+		        resolve: {
+		          loginRequired: loginRequired
+		        }
+		    })
+
+		    .state('app.family', {
+		        url: '/household/family',
+		        templateUrl: 'app/modules/household/householdDetails/family/family.html',
+		        controller: 'familyController',
+		        resolve: {
+		          loginRequired: loginRequired
+		        }
+		    })
+
+		    .state('app.resident', {
+		        url: '/household/resident',
+		        templateUrl: 'app/modules/household/householdDetails/family/resident/resident.html',
+		        controller: 'residentController',
+		        resolve: {
+		          loginRequired: loginRequired
+		        }
+		    })
+
 		    .state('app.barangay', {
-		        url: '/household',
+		        url: '/barangay',
 		        templateUrl: 'app/modules/barangay/barangay.html',
 		        controller: 'barangayController',
 		        resolve: {
 		          loginRequired: loginRequired
 		        }
 		    })
+
+		      .state('app.purok', {
+		        url: '/barangay/purok',
+		        templateUrl: 'app/modules/barangay/purok/purok.html',
+		        controller: 'purokController',
+		        resolve: {
+		          loginRequired: loginRequired
+		        }
+		    })
+
 
 		    .state('app.province', {
 		        url: '/province',
@@ -92,9 +138,18 @@
 		        }
 		    })
 
+		    // .state('app.modal', {
+		    //     url: '/province/modal',
+		    //     templateUrl: 'app/modules/province/deletemodal.html',
+		    //     controller: 'provinceController',
+		    //     resolve: {
+		    //       loginRequired: loginRequired
+		    //     }
+		    // })
+
 		    .state('app.municipality', {
 		        url: '/province/municipality',
-		        templateUrl: 'app/modules/province/municipality.html',
+		        templateUrl: 'app/modules/province/municipality/municipality.html',
 		        controller: 'municipalityController',
 		        resolve: {
 		          loginRequired: loginRequired

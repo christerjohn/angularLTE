@@ -13,8 +13,8 @@
       	}
 
       	$scope.user = {
-      		name: "Alvin",
-      		lastname: "Pacot",
+      		name: "Admin",
+      		lastname: "P",
       		dateJoined: "Jan. 2016"
       	}
     }

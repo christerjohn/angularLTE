@@ -1,10 +1,23 @@
-<!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
+<section class="sidebar" style="height: auto;">
+      <!-- Sidebar user panel -->
+      
       <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu">
-        <li class="header">MAIN NAVIGATION</li>
-        <li><a ui-sref="app.dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <li><a ui-sref="app.user"><i class="fa fa-group"></i> <span>User List</span></a></li>
-        <li class="header">APP FEATURES</li>
-      </ul>
+        <ul class="sidebar-menu">
+            <li class="header">NAVIGATION</li>
+            <li class="" ><a ui-sref="app.dashboard"><i class='fa fa-dashboard'></i> <span>Dashboard</span></a></li>
+            <li class="" ><a ui-sref="app.user"><i class='fa fa-users'></i> <span>Users</span></a></li>
+            <li class=""><a ui-sref="app.province"><i class='fa fa-university'></i> <span>Pronvinces</span></a></li>
+            <li class=""><a ui-sref="app.barangay"><i class='fa fa-legal'></i> <span>Barangays</span></a></li>
+            <li class=""><a ui-sref="app.household"><i class='fa fa-home '></i> <span>Households</span></a></li>
+            <li class=""><a ui-sref="app.report"><i class='fa fa-bar-chart'></i> <span>Reports</span></a></li>
+            <li class="treeview">
+                <a href="">
+                    <i class='fa fa-map-marker'></i> <span>Maps</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu" style="display: none;">
+                    <li class=""><a ui-sref="app.mappopulation"><i class="fa fa-circle-o"></i> Population</a></li>
+                    <li class=""><a ui-sref="app.mapflood"><i class="fa fa-circle-o"></i> Flood Maps</a></li>
+                </ul>
+            </li>
+        </ul>
     </section>
