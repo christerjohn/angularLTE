@@ -9,7 +9,7 @@
 				'ngAnimate', 
 				'toastr', 
 				'ui.router',
-				'satellizer'
+				'satellizer',
 			])
   		.config(appConfig);
 
@@ -87,6 +87,15 @@
 		        url: '/province',
 		        templateUrl: 'app/modules/province/province.html',
 		        controller: 'provinceController',
+		        resolve: {
+		          loginRequired: loginRequired
+		        }
+		    })
+
+		    .state('app.municipality', {
+		        url: '/province/municipality',
+		        templateUrl: 'app/modules/province/municipality.html',
+		        controller: 'municipalityController',
 		        resolve: {
 		          loginRequired: loginRequired
 		        }

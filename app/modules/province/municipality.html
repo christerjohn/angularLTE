@@ -1,7 +1,9 @@
 <section class="content-header">
           <h1>
-            Provinces
-          </h1>      
+              <a ui-sref="app.province">
+                  <span class="fa fa-reply"></span>
+              </a> Lanao Del Norte
+          </h1>          
         </section>
         <!-- Main content -->
         <section class="content">
@@ -10,14 +12,16 @@
               <div class="box">
                 <div class="box-header">
                     <div class="col-xs-3">   
-                      <h3 class="box-title">List of Provinces</h3>
+                      <h3 class="box-title">List of Municipalities</h3>
                     </div>
                     <div class="col-xs-0">
-                      <a data-toggle="modal" data-target="#add-province" class="btn btn-primary btn-sm pull-right">
+                      <a data-toggle="modal" data-target="#add-municipality" class="btn btn-primary btn-sm pull-right">
                           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
-                          Add Province
+                          Add Municipalities
                       </a>
-                    </div>                  
+                    </div>
+                      
+                   
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
@@ -29,26 +33,30 @@
                           <th><center>Delete</center></th>
                       </tr>
                     </thead>
+
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td><a  href="#/app/province/municipality">Lanao del Norte</a></td>
+                        <td>Iligan City</td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#edit-province" >
+                              <a href="#" data-toggle="modal" data-target="#edit-municipality" >
                                 <span class="glyphicon glyphicon-edit text-info" aria-hidden="true"></span>
                               </a>
                             </center>
                         </td>
                         <td>
                             <center>
-                              <a href="" data-toggle="modal" data-target="#delete-province" >
+                              <a href="#" data-toggle="modal" data-target="#delete-municipality" >
                                 <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
                               </a>
                             </center>
                         </td>
-                      </tr>                               
-                  
+                      </tr> 
+<!-- 
+                      @include('pages.provinces.municipalities.delete_modal') 
+                      @include('pages.provinces.municipalities.edit_modal')  
+ -->
                     </tbody>
                     <tfoot>
                       <tr>
@@ -63,22 +71,4 @@
               </div><!-- /.box -->
             </div><!-- /.col -->
           </div><!-- /.row -->
-</section><!-- /.content -->
-
-<!-- DataTables -->
-<script src="{{ asset('/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
-<!-- page script -->
-<script>
-  $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
-    });
-  });
-</script>
+        </section><!-- /.content -->
