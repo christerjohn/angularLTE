@@ -42,16 +42,16 @@
                         <td>Hinaplanon</td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#edit-user" >
-                                <span class="glyphicon glyphicon-edit text-info" aria-hidden="true"></span>
-                              </a>
+                              <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#edit-user">
+                                 <span class="glyphicon glyphicon-edit text-info fa-lg" aria-hidden="true"></span>
+                              </button>
                             </center>
                         </td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#delete-user" >
-                                <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
-                              </a>
+                             <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#delete-user">
+                                 <span class="glyphicon glyphicon-remove text-danger fa-lg" aria-hidden="true"></span>
+                              </button>
                             </center>
                         </td>
                       </tr>                               
@@ -71,8 +71,194 @@
                    </tfoot>
                   </table>
                 </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-        </section><!-- /.content -->
+             </div><!-- /.box -->
+          </div><!-- /.col -->
+      </div><!-- /.row -->
+ </section><!-- /.content -->
 
+
+<!--Start Add User-->
+<div id="add-user" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">User Information</h4>
+            </div>
+            <div class='row modal-body'>
+                <form class="form-horizontal" method="post" action="">
+                    <div class="panel-body">
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Capability</label>
+                            <div class="col-md-6">
+                                  <select class="form-control" id="">
+                                        <option>Admin</option>
+                                        <option>User</option>
+                                        <option>Editor</option>
+                                  </select>                          
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Barangay</label>
+                            <div class="col-md-6">
+                                  <select class="form-control" id="">
+                                        <option>Hinaplanon</option>
+                                  </select>                          
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">First Name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="first_name" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Last Name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="last_name" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Middle Name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="middle_name" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Email</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Password</label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" name="password" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Confirm Password</label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" name="confirm_password" required>
+                            </div>
+                        </div>                       
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary pull-right">ADD</button>
+            </div>
+        </div>
+        <!-- End Modal content-->
+    </div>
+</div>
+<!--End Add User-->
+
+<!--Start Delete User-->
+<div id="delete-user" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header-danger">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">WARNING!</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form method="post" action="">    
+                      <div class="form-group">
+                          <center><strong><label>Are you sure you want to delete User? </label></strong></center>
+                      </div>
+                  </form> 
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger pull-right">Delete</button>
+              </div>
+         </div>
+       <!-- End Modal content-->
+    </div>
+</div>
+<!-- End Delete User -->
+
+
+<!--Start Edit User-->
+<div id="edit-user" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Edit User Information</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form class="form-horizontal" method="post" action="">
+                        
+                    <div class="panel-body">
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Capability</label>
+                            <div class="col-md-6">
+                                  <select class="form-control" id="">
+                                        <option>Admin</option>
+                                        <option>User</option>
+                                        <option>Editor</option>
+                                  </select>                          
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Barangay</label>
+                            <div class="col-md-6">
+                                  <select class="form-control" id="">
+                                        <option>Hinaplanon</option>
+                                  </select>                          
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">First Name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="first_name" value="Juan" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Last Name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="last_name" value="Pedro" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Middle Name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="middle_name" value="Calungsod" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Email</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="email" value="jpedro.gmail.com"required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Password</label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" name="password" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Confirm Password</label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" name="confirm_password" required>
+                            </div>
+                        </div>                       
+                    </div>
+                    </form>
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary pull-right">Update</button>
+              </div>
+         </div>
+         <!-- End Modal content-->
+    </div>
+</div>
+<!--End Edit User-->

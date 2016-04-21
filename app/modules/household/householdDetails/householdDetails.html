@@ -144,16 +144,16 @@
                         <td>4ps</td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#edit-family" >
-                                <span class="glyphicon glyphicon-edit text-info" aria-hidden="true"></span>
-                              </a>
+                              <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#edit-family">
+                                 <span class="glyphicon glyphicon-edit text-info fa-lg" aria-hidden="true"></span>
+                              </button>
                             </center>
                         </td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#delete-family" >
-                                <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
-                              </a>
+                               <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#delete-family">
+                                  <span class="glyphicon glyphicon-remove text-danger fa-lg" aria-hidden="true"></span>
+                              </button>
                             </center>
                         </td>
                       </tr>                               
@@ -172,7 +172,299 @@
                    </tfoot>
                   </table>
                 </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-        </section><!-- /.content -->
+             </div><!-- /.box -->
+          </div><!-- /.col -->
+      </div><!-- /.row -->
+  </section><!-- /.content -->
+
+<!--Start Delete Household Details-->
+<div id="delete-detail" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header-danger">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">WARNING!</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form method="post" action="">    
+                      <div class="form-group">
+                          <center><strong><label>Are you sure you want to delete Household Detail? </label></strong></center>
+                      </div>
+                  </form> 
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger pull-right">Delete</button>
+              </div>
+         </div>
+       <!-- End Modal content-->
+    </div>
+</div>
+<!-- End Delete Household Details-->
+
+
+<!--Start Edit Household Details-->
+<div id="edit-detail" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Edit Household Detail</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form class="form-horizontal" method="post" action="">
+                      <div class="panel-body">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                                      <div class="col-md-9"><strong><u>Household Information</u>:</strong></div>
+                            </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Household Name:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="Hernaez Family" required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Yr. Constructed:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="1990-12-12" required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Net Value:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="10000" required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Household Usage:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="Residential" required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Structure:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="wood" required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Area:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="40" required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">No. of Stories:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="0" required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Holding:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="owned" required>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                      <div class="col-md-9"><strong><u>Flood Information</u>:</strong></div>
+                            </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Flooded:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="Yes" required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Date Flooded:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="2006-12-12" required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Flood Height:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="8 ft." required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Building Height</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="200m" required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Date Entry</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="2007-12-12" required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                      <div class="col-md-9"><strong><u>Household Head Info</u>:</strong></div>
+                            </div>
+                            <div class="form-group row">
+                                    <label class="col-md-6 control-label">Name:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="Ivan" required>
+                                      </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6 control-label">Contact Number:</label>
+                                      <div class="col-md-6">
+                                          <input type="text" class="form-control" name="name" value="09313131345" required>
+                                      </div>
+                                </div>
+
+
+                            </div>
+                      </div> 
+               </form>
+           </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary pull-right">Update</button>
+              </div>
+         </div>
+         <!-- End Modal content-->
+    </div>
+</div>
+<!--End Edit Household Detail-->
+
+<!--Start Preview Flood Maps-->
+<div id="map-detail" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header-map">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Preview</h4>
+              </div>
+              <div class='modal-body'>
+                  <div id="googleMap" style="width:50%;height:50%;"></div>
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button>                
+              </div>
+         </div>
+       <!-- End Modal content-->
+    </div>
+</div>
+<!-- End Preview Details -->
+
+<!--Start Add Family-->
+<div id="add-family" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Family Information</h4>
+            </div>
+            <div class='row modal-body'>
+                <form class="form-horizontal" method="post" action="">
+                    <div class="panel-body">
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Family Identifier</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Monthly Income</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">4ps</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary pull-right">ADD</button>
+            </div>
+        </div>
+        <!-- End Modal content-->
+    </div>
+</div>
+<!--End Add Family-->
+
+<!--Start Delete Family-->
+<div id="delete-family" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header-danger">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">WARNING!</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form method="post" action="">    
+                      <div class="form-group">
+                          <center><strong><label>Are you sure you want to delete Family? </label></strong></center>
+                      </div>
+                  </form> 
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger pull-right">Delete</button>
+              </div>
+         </div>
+       <!-- End Modal content-->
+    </div>
+</div>
+<!-- End Delete Family-->
+
+<!--Start Edit  Family-->
+<div id="edit-family" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Edit Family Information</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form class="form-horizontal" method="post" action="">
+                        <div class="panel-body">
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Family Identifier</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Hernaez Family" required>
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Monthly Income</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="10000" required>
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">4ps</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="yes" required>
+                                  </div>
+                            </div>
+                        </div>
+                    </form>
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary pull-right">Update</button>
+              </div>
+         </div>
+         <!-- End Modal content-->
+    </div>
+</div>
+<!--End Edit Family-->

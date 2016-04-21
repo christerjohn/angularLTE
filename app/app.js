@@ -9,7 +9,9 @@
 				'ngAnimate', 
 				'toastr', 
 				'ui.router',
-				'satellizer',
+				// 'datatables',
+				'satellizer'
+
 			])
   		.config(appConfig);
 
@@ -138,14 +140,7 @@
 		        }
 		    })
 
-		    // .state('app.modal', {
-		    //     url: '/province/modal',
-		    //     templateUrl: 'app/modules/province/deletemodal.html',
-		    //     controller: 'provinceController',
-		    //     resolve: {
-		    //       loginRequired: loginRequired
-		    //     }
-		    // })
+
 
 		    .state('app.municipality', {
 		        url: '/province/municipality',

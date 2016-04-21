@@ -121,16 +121,16 @@
                         <td>2004</td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#edit-health" >
-                                <span class="glyphicon glyphicon-edit text-info" aria-hidden="true"></span>
-                              </a>
+                              <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#edit-health">
+                                 <span class="glyphicon glyphicon-edit text-info fa-lg" aria-hidden="true"></span>
+                              </button>
                             </center>
                         </td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#delete-health" >
-                                <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
-                              </a>
+                              <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#delete-health">
+                                 <span class="glyphicon glyphicon-remove text-danger fa-lg" aria-hidden="true"></span>
+                              </button>
                             </center>
                         </td>
                       </tr>                               
@@ -146,8 +146,233 @@
                       </tr>
                    </tfoot>
                   </table>
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-        </section><!-- /.content -->
+               </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</section><!-- /.content -->
+
+<!--Start Resident Profile-->
+<div id="delete-resprofile" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header-danger">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">WARNING!</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form method="post" action="">    
+                      <div class="form-group">
+                          <center><strong><label>Are you sure you want to delete his/her Profile? </label></strong></center>
+                      </div>
+                  </form> 
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger pull-right">Delete</button>
+              </div>
+         </div>
+       <!-- End Modal content-->
+    </div>
+</div>
+<!-- End Delete Resident Profile-->
+
+<!--Start Edit Resident Profile-->
+<div id="edit-resprofile" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Edit Resident Profile</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form class="form-horizontal" method="post" action="">
+                        <div class="panel-body">
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Last Name</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Hernaez" required>
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">First Name</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Miku" required>
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Middle Name</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Masanting" required>
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Birthdate</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="1996-1-20" required>
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Age</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="20">
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Civil Status</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Married">
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Relation to Head</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Sugar Mommy">
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Education</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Ph.D">
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Occupation Category</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Programmer">
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Specific Occupation</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Permanent">
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Voter</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Yes">
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Disabled</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="No">
+                                  </div>
+                            </div>
+                        </div>
+                    </form>
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary pull-right">Update</button>
+              </div>
+         </div>
+         <!-- End Modal content-->
+    </div>
+</div>
+<!--End Edit Resident Profile-->
+
+<!--Start Add Health Information-->
+<div id="add-health" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Health Information</h4>
+            </div>
+            <div class='row modal-body'>
+                <form class="form-horizontal" method="post" action="">
+                    <div class="panel-body">
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Disease</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Year</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary pull-right">ADD</button>
+            </div>
+        </div>
+        <!-- End Modal content-->
+    </div>
+</div>
+<!--End Add Family-->
+
+<!--Start Health Information-->
+<div id="delete-health" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header-danger">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">WARNING!</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form method="post" action="">    
+                      <div class="form-group">
+                          <center><strong><label>Are you sure you want to delete his/he Health Information? </label></strong></center>
+                      </div>
+                  </form> 
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger pull-right">Delete</button>
+              </div>
+         </div>
+       <!-- End Modal content-->
+    </div>
+</div>
+<!-- End Delete Health Information-->
+
+<!--Start Edit Health Information-->
+<div id="edit-health" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Edit Health Information</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form class="form-horizontal" method="post" action="">
+                        <div class="panel-body">
+                              <div class="form-group row">
+                                  <label class="col-md-4 control-label">Disease</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name"  value="Dengue">
+                                  </div>
+                             </div>
+
+                              <div class="form-group row">
+                                  <label class="col-md-4 control-label">Year</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name"  value="2004">
+                                  </div>
+                              </div>
+                        </div>
+                    </form>
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary pull-right">Update</button>
+              </div>
+         </div>
+         <!-- End Modal content-->
+    </div>
+</div>
+<!--End Edit Health Information-->

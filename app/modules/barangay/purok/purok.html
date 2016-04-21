@@ -57,36 +57,36 @@
                            <div class="form-group row">
                                <label class="col-md-5 control-label">Flood Hazards</label>
                                 <div class="col-md-7">
-                                     <a href="#" class="btn btn-primary btn-sm">
+                                     <button type="button" class="btn btn-primary btn-sm">
                                           <span class="glyphicon glyphicon-open"></span>
                                           Import File
-                                    </a>
+                                     </button>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-7 col-md-offset-5">
-                                      <a href="#" class="btn btn-primary btn-sm">
+                                      <button type="button" class="btn btn-primary btn-sm">
                                           <span class="glyphicon glyphicon-saved"></span>
                                           Submit
-                                    </a>
+                                      </button>
                                 </div>
                             </div>
                             <br>
                             <div class="form-group row">
                                <label class="col-md-5 control-label">Flood Hazards</label>
                                 <div class="col-md-7">
-                                     <a href="#" class="btn btn-primary btn-sm">
+                                     <button type="button" class="btn btn-primary btn-sm">
                                           <span class="glyphicon glyphicon-open"></span>
                                           Import File
-                                    </a>
+                                     </button>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-7 col-md-offset-5">
-                                      <a href="#" class="btn btn-primary btn-sm">
+                                      <button type="button" class="btn btn-primary btn-sm">
                                           <span class="glyphicon glyphicon-saved"></span>
                                           Submit
-                                    </a>
+                                      </button>
                                 </div>
                             </div>                        
                       </div>
@@ -120,16 +120,16 @@
                         <td><center>25</center></td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#delete-flood" >
-                                <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
-                              </a>
+                              <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#delete-flood">
+                                 <span class="glyphicon glyphicon-remove text-danger fa-lg" aria-hidden="true"></span>
+                              </button>
                             </center>
                         </td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#preview-flood" >
-                                <span class="glyphicon glyphicon-map-marker text-success" aria-hidden="true"></span>
-                              </a>
+                              <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#preview-flood">
+                                 <span class="glyphicon glyphicon-map-marker text-success fa-lg" aria-hidden="true"></span>
+                              </button>
                             </center>
                         </td>
                       </tr>                               
@@ -149,17 +149,17 @@
                 </div><!-- /.box-body -->
                 <div class="box-body">
                   <div class="form-group row">
-                           <label class="col-md-3 col-md-offset-4 control-label">View by Return Period:</label>
+                           <label class="col-md-3 col-md-offset-5 control-label">View by Return Period:</label>
                               <div class="col-md-2">
                                    <select class="form-control" id="">
                                      <option>25</option>
                                    </select>                          
                               </div>
-                              <div class="col-md-3">
-                                      <a href="#" class="btn btn-primary btn-sm">
+                              <div class="col-md-2">
+                                      <button type="button" class="btn btn-primary btn-sm">
                                           <span class="glyphicon glyphicon-eye-open"></span>
-                                          Submit
-                                    </a>
+                                          Show
+                                    </button>
                               </div>
                          </div>
                 </div>
@@ -205,23 +205,23 @@
                         <td>100000</td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#edit-purok" >
-                                <span class="glyphicon glyphicon-edit text-info" aria-hidden="true"></span>
-                              </a>
+                              <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#edit-purok">
+                                 <span class="glyphicon glyphicon-edit text-info fa-lg" aria-hidden="true"></span>
+                              </button>
                             </center>
                         </td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#delete-purok" >
-                                <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
-                              </a>
+                              <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#delete-purok">
+                                 <span class="glyphicon glyphicon-remove text-danger fa-lg" aria-hidden="true"></span>
+                              </button>
                             </center>
                         </td>
                         <td>
                             <center>
-                              <a href="#" data-toggle="modal" data-target="#preview-purok" >
-                                <span class="glyphicon glyphicon-map-marker text-success" aria-hidden="true"></span>
-                              </a>
+                              <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#preview-purok">
+                                 <span class="glyphicon glyphicon-map-marker text-success fa-lg" aria-hidden="true"></span>
+                              </button>
                             </center>
                         </td>
                       </tr>
@@ -242,8 +242,264 @@
                    </tfoot>
                   </table>
                 </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-          
-        </section><!-- /.content -->
+            </div><!-- /.box -->
+         </div><!-- /.col -->
+      </div><!-- /.row --> 
+  </section><!-- /.content -->
+
+
+<!--Start Edit Barangay-->
+<div id="edit-barangay" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Edit Barangay Information</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form class="form-horizontal" method="post" action="">
+                        <div class="panel-body">
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Barangay Name</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Hinaplanon" required>
+                                  </div>
+                            </div>
+                        </div>
+                    </form>
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary pull-right">Update</button>
+              </div>
+         </div>
+         <!-- End Modal content-->
+    </div>
+</div>
+<!--End Edit Barangay-->
+
+<!--Start Delete Barangay-->
+<div id="delete-barangay" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header-danger">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">WARNING!</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form method="post" action="">    
+                      <div class="form-group">
+                          <center><strong><label>Are you sure you want to delete Barangay Hinaplanon?</label></strong></center>
+                      </div>
+                  </form> 
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger pull-right">Delete</button>
+              </div>
+         </div>
+       <!-- End Modal content-->
+    </div>
+</div>
+<!-- End Delete Barangay-->
+
+<!--Start Delete Flood Maps-->
+<div id="delete-flood" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header-danger">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">WARNING!</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form method="post" action="">    
+                      <div class="form-group">
+                          <center><strong><label>Are you sure you want to delete? </label></strong></center>
+                      </div>
+                  </form> 
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger pull-right">Delete</button>
+              </div>
+         </div>
+       <!-- End Modal content-->
+    </div>
+</div>
+<!-- End Delete Flood Maps -->
+
+<!--Start Preview Flood Maps-->
+<div id="preview-flood" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header-map">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Preview</h4>
+              </div>
+              <div class='modal-body'>
+                  <div id="googleMap" style="width:555px;height:400px;"></div>
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button>                
+              </div>
+         </div>
+       <!-- End Modal content-->
+    </div>
+</div>
+<!-- End Preview Flood Maps -->
+
+<!--Start Add Purok-->
+<div id="add-purok" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Purok Information</h4>
+            </div>
+            <div class='row modal-body'>
+                <form class="form-horizontal" method="post" action="">
+                    <div class="panel-body">
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Purok Name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Description</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">President</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 control-label">Population</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                        </div>
+                        
+
+                    </div>        
+                </form>
+            </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary pull-right">ADD</button>
+            </div>
+        </div>
+        <!-- End Modal content-->
+    </div>
+</div>
+<!--End Add Purok-->
+
+<!--Start Delete Purok-->
+<div id="delete-purok" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header-danger">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">WARNING!</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form method="post" action="">    
+                      <div class="form-group">
+                          <center><strong><label>Are you sure you want to delete Purok 1A? </label></strong></center>
+                      </div>
+                  </form> 
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger pull-right">Delete</button>
+              </div>
+         </div>
+       <!-- End Modal content-->
+    </div>
+</div>
+<!-- End Delete Purok -->
+
+<!--Start Edit Purok-->
+<div id="edit-purok" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Edit Purok Information</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                  <form class="form-horizontal" method="post" action="">
+                        <div class="panel-body">
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Purok Name</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="1A" required>
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Description</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Safest Place" required>
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">President</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="Duterte" required>
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 control-label">Population</label>
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" name="name" value="100000" required>
+                                  </div>
+                            </div>
+                        </div>
+                    </form>
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary pull-right">Update</button>
+              </div>
+         </div>
+         <!-- End Modal content-->
+    </div>
+</div>
+<!--End Edit Purok-->
+
+<!--Start Preview Purok-->
+<div id="preview-purok" class="modal fade" role="dialog">  
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+        <div class="modal-content">
+              <div class="modal-header-map">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Preview</h4>
+              </div>
+              <div class='row modal-body' style="text-align:right">
+                 
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button>                
+              </div>
+         </div>
+       <!-- End Modal content-->
+    </div>
+</div>
+<!-- End Preview Purok -->
+
+
+
+
+
